@@ -8,6 +8,7 @@ from long_text_OS import os
 from long_text_DM import dm
 from long_text_Ds_Al import ds_al
 from long_text_Mysql import mysql
+from long_text_Redis import redis
 
 
 # 程序入口
@@ -61,6 +62,8 @@ def main():
             data = ds_al
         elif tm_selectbox == "数据库":
             data = mysql
+        elif tm_selectbox == "Redis":
+            data = redis
         n = len(data)
         st.write(f"该目录下有{n}道题：")
         for cnt in range(n):
