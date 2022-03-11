@@ -307,7 +307,8 @@ Collections.sort(list);提供的反转方法：Collections.reverse(list)。
 1. HashMap是Hashtable的轻量级实现，HashMap允许key和value为null，但最多允许一条记录的key为null.而HashTable不允许。
 2. HashTable中的方法是线程安全的，而HashMap不是。在多线程访问HashMap需要提供额外的同步机制。
 3. Hashtable使用Enumeration进行遍历，HashMap使用Iterator进行遍历。
-
+4. Hashtable继承于Dictionary类，HashMap继承自AbstractMap类。
+5. Hashtable中hash数组的默认大小是11，增加方式是old*2+1，HashMap中hash数组的默认大小是15，增长方式是2的指数倍。
 """)), ("""如何决定使用HashMap还是TreeMap?""", ("""
 如果对Map进行插入、删除或定位一个元素的操作更频繁，HashMap是更好的选择。如果需要对key集合进行有序的遍历，TreeMap是更好的选择。
 
